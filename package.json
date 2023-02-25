@@ -1,12 +1,16 @@
 {
   "name": "gitpc",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "git profile chooser",
-  "main": "index.js",
+  "main": "bin/index.js",
   "bin": {
-    "gitpc": "./index.js"
+    "gitpc": "./bin/index.js"
   },
   "scripts": {
+    "build": "babel src --out-dir bin",
+    "prepublishOnly": "npm run build",
+    "dev": "node --watch src/index.js",
+    "start": "npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,5 +22,13 @@
   "bugs": {
     "url": "https://github.com/andresdotsh/gitpc/issues"
   },
-  "homepage": "https://github.com/andresdotsh/gitpc#readme"
+  "engines": {
+    "node": ">=18.12.0"
+  },
+  "homepage": "https://github.com/andresdotsh/gitpc#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2"
+  }
 }
