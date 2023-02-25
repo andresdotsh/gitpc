@@ -1,1 +1,3 @@
-console.log(`Hello world! I'm gitpc`)
+#!/usr/bin/env node
+
+console.log(`Hello world! I'm gitpc!`)
